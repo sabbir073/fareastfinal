@@ -222,7 +222,7 @@ function printDiv2()
 
   newWin.document.open();
 
-  newWin.document.write('<html><body style="background:url(https://i.ibb.co/LhxzjGS/comapny-pad.jpg) no-repeat center; background-size: cover; padding:250px 10px 0 50px; text-align:left;" onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
 
   newWin.document.close();
 
