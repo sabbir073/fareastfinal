@@ -28,14 +28,14 @@ ALL PAGES
                 <nav class="breadcrumb pd-0 mg-0 tx-13">
                    <a class="breadcrumb-item" href="index.html"><i class="icon ion-ios-home-outline"></i> Home</a>
         <!--               <a class="breadcrumb-item" href="#">Dashboard</a>-->
-                   <span class="breadcrumb-item active">ALL PAGES</span>
+                   <span class="breadcrumb-item active">ALL BIMAS</span>
                 </nav>
              </div>
 
 
 
         <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
-          <h4 class="tx-gray-800 mg-b-5">ALL PAGES</h4>
+          <h4 class="tx-gray-800 mg-b-5">ALL BIMAS</h4>
         </div>
 
 
@@ -76,7 +76,7 @@ ALL PAGES
                               <tr>
                                 <td>{{ $page->id }}</td>
                                 <td>{!! html_entity_decode($page->page_title) !!}</td>
-                                <td>{{ url('/pages') }}/{{ $page->id }}/{{ $page->slug }}</td>
+                                <td>{{ url('/bima') }}/{{ $page->id }}/{{ $page->slug }}</td>
 
                                 <td>{{ $page->created_at->diffForHumans() }}</td>
 

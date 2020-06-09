@@ -122,7 +122,7 @@
               <div class="img_box">
                   <img src="https://res.cloudinary.com/dhe6napl7/image/upload/v1581360767/clients/fareast/img/Untitled-4.png" alt="">
                   <h2>Md. Nazrul Islam</h2>
-                  {{-- <h2>{!! html_entity_decode($message->relationBetweenManagement->name) !!}</h2> --}}
+                 
                   <h2>Chairman</h2>
               </div>
               <div class="text_box">

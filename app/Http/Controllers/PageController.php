@@ -36,12 +36,21 @@ class PageController extends Controller
 // create
     function create(Request $request)
     {
-      page::insert([
-        'page_title'=>$request->page_title,
-        'page_details'=>$request->page_details,
-        'slug'=>Str::slug($request->page_title),
-        'created_at'=>Carbon::now(),
-      ]);
+      $page = new page();
+      $page->page_title = $request->page_title;
+      $page->page_details = $request->page_details;
+      $page->slug = Str::slug($request->page_title);
+
+      if ($file = $request->file('photo')) {
+          $fileName = $file->getClientOriginalName() ;
+          $destinationPath = public_path().'/uploads/pages' ;
+          $file->move($destinationPath,$fileName);
+          $page->photo = $fileName;
+        }else{
+            $page->photo = $request->old_photo;
+        }
+
+      $page->save();
 
 
             Alert::toast('ADDED','success');

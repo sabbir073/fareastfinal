@@ -1217,7 +1217,7 @@ img.zoom {
   max-width: 100%;
   margin: 0;
   padding: 0;
-  filter: blur(50px);
+  filter: blur(0);
 }
 [id^="lightbox-"] a.close {
   width: 2em;
@@ -1320,7 +1320,7 @@ img.zoom {
 
 /* POP-UP
 ========================================== */
-.pop-up {
+.pop-up,.rabbani1,.rabbani2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1343,13 +1343,13 @@ img.zoom {
   height: 100%;
 }
 @media (min-width: 768px) {
-  .pop-up {
+  .pop-up,.rabbani1,.rabbani2 {
     width: calc(100% - 40px);
     height: auto;
     max-width: 900px;
   }
 }
-.pop-up .content {
+.pop-up .content,.rabbani1 .content,.rabbani2 .content{
   width: 100%;
   max-width: 900px;
   overflow: hidden;
@@ -1358,26 +1358,26 @@ img.zoom {
   min-height: 100vh;
 }
 @media (min-width: 768px) {
-  .pop-up .content {
+  .pop-up .content,.rabbani1 .content,.rabbani2 .content {
     min-height: inherit;
   }
 }
-.pop-up .content .container {
+.pop-up .content .container,.rabbani1 .content .container,.rabbani2 .content .container{
   padding: 100px 20px 140px;
 }
 @media (min-width: 568px) {
-  .pop-up .content .container {
+  .pop-up .content .container,.rabbani1 .content .container,.rabbani2 .content .container {
     padding: 50px 20px 80px;
   }
 }
 @media (min-width: 768px) {
-  .pop-up .content .container {
+  .pop-up .content .container,.rabbani1 .content .container,.rabbani2 .content .container {
     padding: 70px 0px 90px;
     max-width: 520px;
     margin: 0 auto;
   }
 }
-.pop-up .content .close {
+.pop-up .content .close,.rabbani1 .content .close,.rabbani2 .content .close{
   position: absolute;
   top: 20px;
   left: 20px;
@@ -1389,16 +1389,16 @@ img.zoom {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-.pop-up .content .close:hover {
+.pop-up .content .close:hover,.rabbani1 .content .close:hover,.rabbani2 .content .close:hover{
   cursor: pointer;
   color: #f66867;
 }
-.pop-up .content .dots .dot {
+.pop-up .content .dots .dot,.rabbani1 .content .dots .dot,.rabbani2 .content .dots .dot{
   position: absolute;
   border-radius: 100%;
   z-index: 11;
 }
-.pop-up .content .dots .dot:nth-of-type(1) {
+.pop-up .content .dots .dot:nth-of-type(1),.rabbani1 .content .dots .dot:nth-of-type(1),.rabbani2 .content .dots .dot:nth-of-type(1){
   top: -80px;
   right: -80px;
   width: 160px;
@@ -1410,14 +1410,14 @@ img.zoom {
   animation: float 6s ease-in-out infinite;
 }
 @media (min-width: 768px) {
-  .pop-up .content .dots .dot:nth-of-type(1) {
+  .pop-up .content .dots .dot:nth-of-type(1),.rabbani1 .content .dots .dot:nth-of-type(1),.rabbani2 .content .dots .dot:nth-of-type(1){
     top: -190px;
     right: -190px;
     width: 380px;
     height: 380px;
   }
 }
-.pop-up .content .dots .dot:nth-of-type(2) {
+.pop-up .content .dots .dot:nth-of-type(2),.rabbani1 .content .dots .dot:nth-of-type(2),.rabbani2 .content .dots .dot:nth-of-type(2){
   bottom: -120px;
   left: -120px;
   width: 240px;
@@ -1428,7 +1428,7 @@ img.zoom {
   -o-animation: float 8s ease-in-out infinite;
   animation: float 8s ease-in-out infinite;
 }
-.pop-up .content .dots .dot:nth-of-type(3) {
+.pop-up .content .dots .dot:nth-of-type(3),.rabbani1 .content .dots .dot:nth-of-type(3),.rabbani2 .content .dots .dot:nth-of-type(3){
   bottom: -50px;
   right: -50px;
   width: 100px;
@@ -1439,7 +1439,7 @@ img.zoom {
   -o-animation: float 4s ease-in-out infinite;
   animation: float 4s ease-in-out infinite;
 }
-.pop-up .content .title h1 {
+.pop-up .content .title h1,.rabbani1 .content .title h1,.rabbani2 .content .title h1 {
   text-align: center;
   color: #f66867;
   text-transform: uppercase;
@@ -1447,7 +1447,7 @@ img.zoom {
   font-size: 2.8rem;
   letter-spacing: 0.05rem;
 }
-.pop-up .content img {
+.pop-up .content img,.rabbani1 .content img,.rabbani2 .content img {
   width: 100%;
   max-width: 220px;
   display: inline-block;
@@ -1465,35 +1465,32 @@ img.zoom {
   -webkit-backface-visibility: hidden;
 }
 @media (min-width: 768px) {
-  .pop-up .content img {
+  .pop-up .content img,.rabbani1 .content img,.rabbani2 .content img {
     max-width: 300px;
   }
 }
-.pop-up .content .subscribe h1 {
+.pop-up .content .subscribe h1,.rabbani1 .content .subscribe h1,.rabbani2 .content .subscribe h1 {
   font-size: 1.5rem;
   color: #3e4146;
   line-height: 130%;
   letter-spacing: 0.07rem;
   margin-bottom: 30px;
 }
-.pop-up .content .subscribe h1 span {
+.pop-up .content .subscribe h1 span,.rabbani1 .content .subscribe h1 span,.rabbani2 .content .subscribe h1 span {
   color: #f66867;
 }
-.pop-up .content .subscribe form {
+.pop-up .content .subscribe form,.rabbani1 .content .subscribe form,.rabbani2 .content .subscribe form {
   overflow: hidden;
 }
-.pop-up .content .subscribe form input {
+.pop-up .content .subscribe form input,.rabbani1 .content .subscribe form input,.rabbani2 .content .subscribe form input {
   width: 100%;
   float: left;
-  padding: 15px 20px;
-  text-align: center;
+  padding: 15px 12px;
+  text-align: left;
   font-family: inherit;
-  font-size: 1.1rem;
-  letter-spacing: 0.05rem;
-  outline: 0;
 }
-.pop-up .content .subscribe form input[type=email] {
-  margin-bottom: 15px;
+.pop-up .content .subscribe form input[type=email],.rabbani1 .content .subscribe form input[type=email],.rabbani2 .content .subscribe form input[type=email] {
+  margin-bottom: 10px;
   border: 1px solid #bec1c5;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -1501,35 +1498,34 @@ img.zoom {
   transition: all 0.4s;
 }
 @media (min-width: 768px) {
-  .pop-up .content .subscribe form input[type=email] {
+  .pop-up .content .subscribe form input[type=email],.rabbani1 .content .subscribe form input[type=email],.rabbani2 .content .subscribe form input[type=email] {
     margin-bottom: 0px;
     width: 75%;
     border-right-width: 0px;
   }
 }
-.pop-up .content .subscribe form input[type=email]:focus {
-  border-color: #3e4146;
+.pop-up .content .subscribe form input[type=email]:focus,.rabbani1 .content .subscribe form input[type=email]:focus,.rabbani2 .content .subscribe form input[type=email]:focus {
+  border-color: #000;
 }
-.pop-up .content .subscribe form input[type=submit] {
+.pop-up .content .subscribe form input[type=submit],.rabbani1 .content .subscribe form input[type=submit],.rabbani2 .content .subscribe form input[type=submit] {
   background-color: #8e6ac1;
   color: #ffffff;
-  border: 1px solid #8e6ac1;
+  border: 1px solid #000;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 @media (min-width: 768px) {
-  .pop-up .content .subscribe form input[type=submit] {
+  .pop-up .content .subscribe form input[type=submit],.rabbani1 .content .subscribe form input[type=submit],.rabbani2 .content .subscribe form input[type=submit] {
     width: 25%;
   }
 }
-.pop-up .content .subscribe form input[type=submit]:hover {
+.pop-up .content .subscribe form input[type=submit]:hover,.rabbani1 .content .subscribe form input[type=submit]:hover,.rabbani2 .content .subscribe form input[type=submit]:hover {
   cursor: pointer;
-  background-color: #7349af;
-  border-color: #7349af;
+  border: 1px solid #000;
 }
-.pop-up.open {
+.pop-up.open,.rabbani1.open,.rabbani2.open {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
@@ -1538,7 +1534,7 @@ img.zoom {
   -o-transform: translate(-50%, -50%) scale(1);
   transform: translate(-50%, -50%) scale(1);
 }
-.pop-up.open img {
+.pop-up.open img,.rabbani1.open img,.rabbani2.open img {
   opacity: 1;
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -1555,7 +1551,112 @@ img.zoom {
   transform: translateX(0px);
 }
 
+.inputstyle{
+  border:1px solid #000 !important;
+}
+.inputstyle:focus{
+  border:1px solid #000 !important;
+}
 
+.form {
+  padding: 5px;
+  margin-right: 50px;
+}
+
+form input{
+  display: block;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+form input{
+  padding-left: 40px;
+  width: 500px;
+}
+.inputWithIcon{
+  position: relative;
+}
+.inputWithIcon i{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 25px;
+  padding: 12px 8px;
+  color: #009966;
+}
+
+button{
+  display: block;
+  margin: auto;
+  background-color: #ff9933;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+
+.form2 {
+  width: 50%;
+  float: left;
+}
+
+form2 input{
+  display: block;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+form2 input{
+  padding-left: 40px;
+}
+
+
+form2 input,
+textarea, select{
+  display: block;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 10px 0px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+form2 input,
+textarea, select{
+  padding-left: 40px;
+  width:500px;
+}
+
+.inputWithIcon{
+  position: relative;
+}
+.inputWithIcon i{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 25px;
+  padding: 10px 8px;
+  color: #009966;
+}
+button{
+  display: block;
+  margin: auto;
+  background-color: #ff9933;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  margin-left:170px;
+}
 
 @endsection
 
@@ -1789,7 +1890,7 @@ img.zoom {
           --}}
 
             <div class="card card-twelve hvr-push" style="border: 0; border-radius: 10% 0 0 0;box-shadow: 0 5px 30px rgba(41,41,59,.6);">
-              <a href="#">
+              <a id="policy_statement">
                 <div class="card-body" style="padding: 0;">
                     <h6 class="text-uppercase text-white" style="background: #db811a;margin: 0;font-size: 14px;font-weight: bold;padding: 7px;">Policy Statement</h6>
                     <figure style="background:#f59120; padding: 45px;">
@@ -1823,10 +1924,6 @@ img.zoom {
                   </div>
                 </a>
                 </div>
-
-
-
-
         </div>
         {{-- @endforeach --}}
 
@@ -1835,7 +1932,7 @@ img.zoom {
 
 
             <div class="card card-twelve hvr-push" style="border: 0; border-radius: 0 0 0 0;box-shadow: 0 5px 30px rgba(41,41,59,.6);">
-              <a href="#">
+              <a id="paypremium">
                 <div class="card-body" style="padding: 0;">
                     <h6 class="text-uppercase text-white" style="background: #a6147c;margin: 0;font-weight: bold;padding: 7px;">Pay Premium</h6>
                     <figure style="background:#b81c89; padding: 47px;">
@@ -1855,7 +1952,7 @@ img.zoom {
 
 
             <div class="card card-twelve hvr-push" style="border: 0; border-radius: 0 0 0 0;box-shadow: 0 5px 30px rgba(41,41,59,.6);">
-              <a href="#">
+              <a href="/network/hospitality">
                 <div class="card-body" style="padding: 0;">
                     <h6 class="text-uppercase text-white" style="background: #ad3c34;margin: 0;font-weight: bold;padding: 7px;">Network Hospitality</h6>
                     <figure style="background:#bd4139; padding: 48px;">
@@ -1874,7 +1971,7 @@ img.zoom {
         <div class="service-item col-lg col-md-6 col-sm-12 " style="padding: 5px;">
 
               <div class="card card-twelve hvr-push" style="border: 0;border-radius: 0 10% 0 0;box-shadow: 0 5px 30px rgba(41,41,59,.6);">
-                <a href="#">
+                <a href="/office-information">
                   <div class="card-body" style="padding: 0;">
                       <h6 class="text-uppercase text-white" style="background: #72b03c;margin: 0;font-weight: bold;padding: 7px;">Office Information</h6>
                       <figure style="background:#7ec242; padding: 47px;">
@@ -1900,7 +1997,7 @@ img.zoom {
         <div class="dot"></div>
       </div>
 
-      <span class="close">close</span>
+      <span class="close"><i class="fas fa-window-close close"></i></span>
 
       <div class="title">
         <h1>Premium Calculator</h1>
@@ -1910,28 +2007,28 @@ img.zoom {
 
       <div class="subscribe">
         <form method="get" id="form" action="#">
-          <input type="date" id="dob" placeholder="Your DOB" style="border:1px solid #000;">
-          <input type="number" id="age" placeholder="Your Age" style="border:1px solid #000;">
-
-          <select class="form-control" name="" id="plan">
+          <input type="date" id="dob" placeholder="Your DOB" class="inputstyle text-muted" style="margin-bottom: 0px;">
+          <input type="number" id="age" placeholder="Your Age" class="inputstyle" style="margin-bottom:20px;">
+          
+          <select class="form-control" name="" id="plan" style="border: 1px solid black; border-radius: 15px; margin-top: 20px;">
             <option value="0">Select One *</option>
           </select>
 
           <div id="termDivSection"></div>
 
-          <select class="form-control" name="" id="term">
+          <select class="form-control" name="" id="term" style="border: 1px solid black; border-radius: 15px; margin-top: 20px;">
             <option value="0">Terms And Policy *</option>
           </select>
 
 
-          <select class="form-control" name="" id="mode">
+          <select class="form-control" name="" id="mode" style="border: 1px solid black; border-radius: 15px; margin-top: 20px;">
             <option value="0">Mode Of Payment *</option>
           </select>
 
-          <input type="number" id="sum" placeholder="ENTER SUM" style="border:1px solid #000;">
+          <input type="number" id="sum" placeholder="Enter Sum" class="inputstyle" style="margin-top: 10px;">
 
 
-          <button type="submit">CALCULATE</button>
+          <button type="submit" style="margin-top: 20px; background:#0CE80C; padding: 10px 10px; color: white;">CALCULATE</button>
 
 
 
@@ -1940,8 +2037,98 @@ img.zoom {
     </div>
   </div>
 </div>
-{{-- ------------------------------ --}}
 
+<div class="rabbani1">
+  <div class="content">
+    <div class="container">
+        <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <span class="close"><i class="fas fa-window-close" style="margin-bottom: 30px;margin-right: 600px;height: 20px;width:20px;"></i></span>
+
+      <div class="title">
+        <h1 style="margin-left: 25px;">Policy Statement</h1>
+      </div>
+            <div class="form" style="margin-left: 30px;">
+                <form method="get" id="form" action="">
+                    <div class="inputWithIcon">
+                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                        <input type="text" placeholder="Enter Policy Number" class="inputstyle">
+                    </div>
+                    <div class="inputWithIcon">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        <input type="date" class="inputstyle text-muted">
+                    </div>
+                    <div class="inputWithIcon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input type="text" placeholder="Mobile Number" class="inputstyle">
+                    </div>
+                    <button>Confirm</button>
+                </form>
+            </div>
+    </div>
+  </div>
+</div>
+{{-- ------------------------------ --}}
+<div class="rabbani2">
+  <div class="content">
+    <div class="container">
+        <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <span class="close"><i class="fas fa-window-close" style="margin-bottom: 30px;margin-right: 600px;height: 20px;width:20px;"></i></span>
+
+      <div class="title">
+        <h1>Pay Premium</h1>
+      </div>
+            <div class="form2">
+                <form method="get" id="form" action="">
+                    <div class="inputWithIcon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <input type="text" placeholder="Name" class="inputstyle">
+                    </div>
+                    <div class="inputWithIcon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <input type="text" placeholder="Mobile Number" class="inputstyle">
+                    </div>
+                    <div class="inputWithIcon">
+                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                        <input type="text" placeholder="Policy Number" class="inputstyle">
+                    </div>
+                    <div class="inputWithIcon">
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                        <input type="text" placeholder="Amount" class="inputstyle">
+                    </div>
+
+
+                    <div class="inputWithIcon text-muted">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <select name="" id="" style="border: 1px solid #000;">
+                            <option value="">Please select Payment Gateway</option>
+                            <option value="">Cash</option>
+                            <option value="">Bank</option>
+                            <option value="">Online</option>
+                            <option value="">Card</option>
+                        </select>
+                    </div>
+
+
+                    <div class="inputWithIcon" style="margin-top: 20px;">
+                        <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                        <textarea name="" id="" cols="30" rows="10" class="inputstyle" placeholder="Note"></textarea>
+                    </div>
+                    <button>Confirm</button>
+                </form>
+            </div>
+    </div>
+  </div>
+</div>
 
 
       </div>
@@ -2272,7 +2459,7 @@ img.zoom {
 
                     <div class="post-item hvr-shrink" style="border: 1px solid #e4e8ed ;padding: 10px; width: 100%;">
 
-                        <div class="date">
+                        <div class="date">b
                             <h6>{{ $notice->created_at->format('d') }}</h6>
                             <span>{{ $notice->created_at->format('M, y') }}</span>
                         </div>
@@ -2351,7 +2538,7 @@ img.zoom {
 
 
 
-        <div class="col-md-6">
+        <div class="col-md-6" style="max-width:100%;">
 
           <div class="showcase showcase--title1 news-title" style="margin-bottom: 25px;">
             <h3>NEWS AND EVENTS</h3>
@@ -2390,7 +2577,7 @@ img.zoom {
           </center>
 
         </div>
-
+    </div>
 
 
         {{-- <div class="col-md-4">
@@ -2411,9 +2598,8 @@ img.zoom {
 
         </div> --}}
 
-
-
         <div class="col-md-12">
+
 
           <div class="showcase showcase--title1 news-title" style="margin-bottom: 25px;">
             <h3>GALLARY</h3>
@@ -2483,30 +2669,26 @@ img.zoom {
       <div class="row">
 
 
-        @foreach ($promotions as $promotion)
+        @foreach ($bimas as $promotion)
           {{-- <div class="col-md-4">
             <a href="{{ $promotion->link }}" class="hvr-grow">
-
-
               <blockquote class="blockquote blockquote4 promo_block buttonshadow" style="background: linear-gradient(to right,{{ $promotion->left_grad }},{{ $promotion->right_grad }});">
-                <p>{{ $promotion->promotion_title }}</p>
+                <p>{{ $promotion->page_title }}</p>
               </blockquote>
-
-
             </a>
 
           </div> --}}
 
           <div class="col-md-4">
 
-          <a href="{{ $promotion->link }}">
+          <a href="{{ url('/bima') }}/{{ $promotion->id }}/{{ $promotion->slug }}">
 
             <div class="flip">
                 <div class="front" style="background-image: url(https://images.pexels.com/photos/540518/pexels-photo-540518.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
-                   <h1 class="text-shadow">{{ $promotion->promotion_title }}</hi>
+                   <h1 class="text-shadow">{{ $promotion->page_title }}</hi>
                 </div>
                 <div class="back">
-                   <h2 class="text-white">{{ $promotion->promotion_title }}</h2>
+                   <h2 class="text-white">{{ $promotion->page_title }}</h2>
                 </div>
             </div>
 
@@ -3167,7 +3349,24 @@ $('#premium_cal_pop').click(function(){
 $('.pop-up .close').click(function(){
   $('.pop-up').removeClass('open');
 });
+
+$('#policy_statement').click(function(){
+    $('.rabbani1').addClass('open');
+});
+  
+$('.rabbani1 .close').click(function(){
+    $('.rabbani1').removeClass('open');
+});
+
+$('#paypremium').click(function(){
+    $('.rabbani2').addClass('open');
+});
+  
+$('.rabbani2 .close').click(function(){
+    $('.rabbani2').removeClass('open');
+});
 </script>
+
 
 
 

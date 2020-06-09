@@ -10,6 +10,7 @@
     z-index: 1;
     padding: 1px 0;
   }
+  ::-webkit-datetime-edit { text-transform: uppercase; }
 
   header h2 {
             color: #ff9933;
@@ -136,6 +137,12 @@
           position: fixed;
           top: 39%;
         }
+        .inputstyle{
+            border:1px solid #000 !important;
+          }
+          .inputstyle:focus{
+            border:1px solid #000 !important;
+          }
 
 @endsection
 
@@ -158,16 +165,16 @@
                      <div class="form">
                          <form action="">
                              <div class="inputWithIcon">
-                                 <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                 <input type="text" placeholder="Enter Policy Number">
+                                 <i class="fa fa-file" aria-hidden="true"></i>
+                                 <input type="text" placeholder="Enter Policy Number" class="inputstyle">
                              </div>
                              <div class="inputWithIcon">
                                  <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-                                 <input type="date">
+                                 <input type="date" class="inputstyle">
                              </div>
                              <div class="inputWithIcon">
                                  <i class="fa fa-phone" aria-hidden="true"></i>
-                                 <input type="text" placeholder="Mobile Number">
+                                 <input type="text" placeholder="Mobile Number" class="inputstyle">
                              </div>
                              <button>Confirm</button>
                          </form>

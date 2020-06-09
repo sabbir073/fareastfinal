@@ -208,7 +208,13 @@ Route::post('/pages/update','PageController@update')->name('update');
 Route::get('/pages/delete/{page_id}','PageController@trash')->name('trash');
 
 
-
+//PAGES
+Route::get('/create/pages/add','PromotionController@index')->name('create_page_index');
+Route::post('/create/pages/create','PromotionController@create')->name('create_page_create');
+Route::get('/create/pages/all','PromotionController@all')->name('create_all_pages');
+Route::get('/create/pages/edit/{page_id}/{slug}','PromotionController@edit')->name('create_edit');
+Route::post('/create/pages/update','PromotionController@update')->name('create_update');
+Route::get('/create/pages/delete/{page_id}','PromotionController@trash')->name('create_trash');
 
 // AppSettingsController->middleware END ------------------------------------------------------------------------------
 
@@ -268,7 +274,6 @@ Route::get('/dashboard/management/corporatemanagement','ManagementController@cor
 
 // ManagementController->middleware END ------------------------------------------------------------------
 
-
 // FareastStarController->middleware -------------------------------------------------------------
 
 // fareast_star_index
@@ -298,7 +303,6 @@ Route::post('/getVideo','FaqController@getVideo');
 
 // FaqController->middleware END --------------------------------------------------------------
 
-
 // VideoController->middleware --------------------------------------------------------------
 // video_index
 Route::get('/dashboard/video','VideoController@video_index')->name('video_index');
@@ -308,7 +312,6 @@ Route::post('/dashboard/video/create','VideoController@video_create')->name('vid
 Route::get('/dashboard/video/delete/{video_id}','VideoController@video_delete')->name('video_delete');
 
 // VideoController->middleware END --------------------------------------------------------------
-
 
 // EventController->middleware --------------------------------------------------------------
 
@@ -333,7 +336,6 @@ Route::get('/dashboard/event/restore/{event_id}','EventController@event_restore'
 
 // EventController->middleware END --------------------------------------------------------------
 
-
 // NoticeController->middleware --------------------------------------------------------------
 
 // notice_index
@@ -357,10 +359,77 @@ Route::post('/dashboard/notice/update','NoticeController@notice_update')->name('
 // notice_force_delete
 Route::get('/dashboard/notice/force/delete/{notice_id}','NoticeController@notice_force_delete')->name('notice_force_delete');
 
-
 // NoticeController->middleware END --------------------------------------------------------------
 
+// AnnualReportsController->middleware START ------------------------------------------------------------
+Route::get('/dashboard/annual/report','AnnualReportsController@annual_report')->name('annual_report');
+Route::post('/dashboard/annual/report/create','AnnualReportsController@annual_report_create')->name('annual_report_create');
+Route::get('/dashboard/annual/report/delete/{id}','AnnualReportsController@annual_report_delete')->name('annual_report_delete');
+Route::get('/dashboard/annual/report/edit/{id}','AnnualReportsController@annual_report_edit')->name('annual_report_edit');
+Route::post('/dashboard/annual/report/update/{id}','AnnualReportsController@annual_report_update')->name('annual_report_update');
+Route::get('/dashboard/annual/report/download/{id}','AnnualReportsController@download')->name('annual_report_download');
 
+// AnnualReportsController->middleware END --------------------------------------------------------------
+
+// AnnualReportsController->middleware START ------------------------------------------------------------
+Route::get('/dashboard/complaince/certificate','CompalianceCertificateController@certificate_certificate')->name('dash_complaince_certificate');
+Route::post('/dashboard/complaince/certificate/create','CompalianceCertificateController@certificate_certificate_create')->name('complaince_certificate_create');
+Route::get('/dashboard/complaince/certificate/delete/{id}','CompalianceCertificateController@certificate_certificate_delete')->name('complaince_certificate_delete');
+Route::get('/dashboard/complaince/certificate/edit/{id}','CompalianceCertificateController@certificate_certificate_edit')->name('complaince_certificate_edit');
+Route::post('/dashboard/complaince/certificate/update/{id}','CompalianceCertificateController@certificate_certificate_update')->name('complaince_certificate_update');
+Route::get('/dashboard/complaince/certificate/download/{id}','CompalianceCertificateController@download')->name('complaince_certificate_download');
+
+// AnnualReportsController->middleware END --------------------------------------------------------------
+// AnnualReportsController->middleware START ------------------------------------------------------------
+Route::get('/dashboard/complaince/report','CompalianceReportController@certificate_report')->name('dash_complaince_report');
+Route::post('/dashboard/complaince/report/create','CompalianceReportController@certificate_report_create')->name('complaince_report_create');
+Route::get('/dashboard/complaince/report/delete/{id}','CompalianceReportController@certificate_report_delete')->name('complaince_report_delete');
+Route::get('/dashboard/complaince/report/edit/{id}','CompalianceReportController@certificate_report_edit')->name('complaince_report_edit');
+Route::post('/dashboard/complaince/report/update/{id}','CompalianceReportController@certificate_report_update')->name('complaince_report_update');
+Route::get('/dashboard/complaince/report/download/{id}','CompalianceReportController@download')->name('complaince_report_download');
+
+// AnnualReportsController->middleware END --------------------------------------------------------------
+
+// ShareholdingController->middleware START ------------------------------------------------------------
+Route::get('/dashboard/financial/statement','FinancialStatementController@index')->name('financial.index');
+Route::post('/dashboard/financial/create','FinancialStatementController@create')->name('financial.create');
+Route::post('/dashboard/financial/year/create','FinancialStatementController@year_create')->name('financial.year.create');
+Route::get('/dashboard/financial/delete/{id}','FinancialStatementController@trash')->name('financial.trash');
+Route::get('/dashboard/financial/edit/{id}','FinancialStatementController@edit')->name('financial.edit');
+Route::post('/dashboard/financial/update/{id}','FinancialStatementController@update')->name('financial.update');
+Route::get('/dashboard/financial/statement/download/{id}','FinancialStatementController@download')->name('financial_download');
+
+
+// FinancialStatementController->middleware END --------------------------------------------------------------
+
+
+// FinancialStatementController->middleware START ------------------------------------------------------------
+Route::get('/dashboard/value/statement','ValueStatementController@index')->name('value.index');
+Route::post('/dashboard/value/create','ValueStatementController@create')->name('value.create');
+Route::get('/dashboard/value/delete/{id}','ValueStatementController@trash')->name('value.trash');
+Route::get('/dashboard/value/edit/{id}','ValueStatementController@edit')->name('value.edit');
+Route::post('/dashboard/value/update/{id}','ValueStatementController@update')->name('value.update');
+// FinancialStatementController->middleware END --------------------------------------------------------------
+
+// FinancialStatementController->middleware START ------------------------------------------------------------
+Route::get('/dashboard/director/report','DirectorReportController@index')->name('director.index');
+Route::post('/dashboard/director/create','DirectorReportController@create')->name('director.create');
+Route::get('/dashboard/director/delete/{id}','DirectorReportController@trash')->name('director.trash');
+Route::get('/dashboard/director/edit/{id}','DirectorReportController@edit')->name('director.edit');
+Route::post('/dashboard/director/update/{id}','DirectorReportController@update')->name('director.update');
+Route::get('/dashboard/director/report/download/{id}','DirectorReportController@download')->name('director_download');
+// FinancialStatementController->middleware END --------------------------------------------------------------
+
+
+
+// FinancialStatementController->middleware START ------------------------------------------------------------
+Route::get('/dashboard/shareholding','ShareholdingController@index')->name('shareholding.index');
+Route::post('/dashboard/shareholding/create','ShareholdingController@create')->name('shareholding.create');
+Route::get('/dashboard/shareholding/delete/{id}','ShareholdingController@trash')->name('shareholding.trash');
+Route::get('/dashboard/shareholding/edit/{id}','ShareholdingController@edit')->name('shareholding.edit');
+Route::post('/dashboard/shareholding/update/{id}','ShareholdingController@update')->name('shareholding.update');
+
+// ShareholdingController->middleware END --------------------------------------------------------------
 
 // NewsController->middleware --------------------------------------------------------------
 
@@ -386,8 +455,6 @@ Route::get('/dashboard/news/force/delete/{news_id}','NewsController@news_force_d
 
 // NewsController->middleware END --------------------------------------------------------------
 
-
-
 // ClaimController->middleware --------------------------------------------------------------
 
 // claim_index
@@ -401,8 +468,6 @@ Route::get('/dashboard/claim/trash/{claim_id}','ClaimController@claim_trash')->n
 
 // ClaimController->middleware END --------------------------------------------------------------
 
-
-
 // AwardController->middleware ------------------------------------------------------------------
 
 // award_index
@@ -415,7 +480,6 @@ Route::get('/dashboard/award/delete/{award_id}','AwardController@award_trash')->
 
 // AwardController->middleware END --------------------------------------------------------
 
-
 // PrivacyController->middleware ----------------------------------------------------------------
 //privacy_index
 Route::get('/dashboard/privacy','PrivacyController@privacy_index')->name('privacy_index');
@@ -427,7 +491,6 @@ Route::get('/dashboard/privacy/{privacy_id}','PrivacyController@single_privacy')
 Route::post('/dashboard/privacy/update','PrivacyController@privacy_update')->name('privacy_update');
 
 // PrivacyController->middleware END -----------------------------------------------------------
-
 
 // MessageController->middleware ----------------------------------------------------------------
 //message_index
@@ -465,12 +528,10 @@ Route::post('/dashboard/gallery/create','GalleryController@gallery_create')->nam
 Route::get('/dashboard/gallery/{gallery_id}','GalleryController@gallery_delete')->name('gallery_delete');
 // GalleryController->middleware END -----------------------------------------------------------
 
-
 // PromotionController->middleware START ---------------------------------------------------------
 Route::get('/dashboard/promotion','PromotionController@index')->name('promotion_index');
 Route::post('/dashboard/promotion/create','PromotionController@create')->name('promotion_create');
 // PromotionController->middleware END -----------------------------------------------------------
-
 
 // CorpInfoController->middleware START ---------------------------------------------------------
 Route::get('/dashboard/corp/info','CorpInfoController@index')->name('corp_index');
@@ -490,7 +551,7 @@ Route::get('/dashboard/popup/{popup_id}','PopupController@popup_delete')->name('
 // FrontEnd Routes
 
 //index
-Route::any('/index','FrontendController@index')->name('homepage');
+Route::any('/','FrontendController@index')->name('homepage');
 
 // management_committee
 Route::get('/management-committee','FrontendController@management_committee')->name('management_committee');
@@ -505,7 +566,9 @@ Route::get('/corporate-management/{management_id}','FrontendController@single_co
 // board_of_directors
 Route::get('/board-of-directors','FrontendController@board_of_directors')->name('board_of_directors');
 
-//pages
+// bimas
+Route::get('/bima/{page_id}/{slug}','FrontendController@bima')->name('bima');
+// pages
 Route::get('/pages/{page_id}/{slug}','FrontendController@page')->name('page');
 
 //premium_calculator
@@ -603,17 +666,9 @@ Route::get('/gallery','FrontendController@gallery')->name('gallery');
 // non verified
 Route::get('/non_verified','NonUserController@non_verified')->name('non_verified');
 
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes(['verify'=>true]);
 
-
-
 Route::get('/home', 'HomeController@index')->middleware('outsiders')->name('home');
-
 
 // About Section below
 Route::get('/about','FrontendController@about')->name('about');

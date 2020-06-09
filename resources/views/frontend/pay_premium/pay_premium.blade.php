@@ -158,6 +158,12 @@
           margin-top: 5%;
           z-index:0;
         }
+        .inputstyle{
+            border:1px solid #000 !important;
+          }
+          .inputstyle:focus{
+            border:1px solid #000 !important;
+          }
 
 @endsection
 
@@ -179,25 +185,25 @@
                         <form action="">
                             <div class="inputWithIcon">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <input type="text" placeholder="Name">
+                                <input type="text" placeholder="Name" class="inputstyle">
                             </div>
                             <div class="inputWithIcon">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                <input type="text" placeholder="Mobile Number">
+                                <input type="text" placeholder="Mobile Number" class="inputstyle">
                             </div>
                             <div class="inputWithIcon">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                <input type="text" placeholder="Policy Number">
+                                <i class="fa fa-file" aria-hidden="true"></i>
+                                <input type="text" placeholder="Policy Number" class="inputstyle">
                             </div>
                             <div class="inputWithIcon">
                                 <i class="fa fa-usd" aria-hidden="true"></i>
-                                <input type="text" placeholder="Amount">
+                                <input type="text" placeholder="Amount" class="inputstyle">
                             </div>
 
 
                             <div class="inputWithIcon">
                                 <i class="fa fa-money" aria-hidden="true"></i>
-                                <select name="" id="">
+                                <select name="" id="" style="border: 1px solid #000;">
                                     <option value="">Please select Payment Gateway</option>
                                     <option value="">Cash</option>
                                     <option value="">Bank</option>
@@ -208,8 +214,8 @@
 
 
                             <div class="inputWithIcon">
-                                <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
-                                <textarea name="" id="" cols="30" rows="10">Note</textarea>
+                                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                                <textarea name="" id="" cols="30" rows="10" class="inputstyle" placeholder="Note"></textarea>
                             </div>
                             <button>Confirm</button>
                         </form>

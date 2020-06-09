@@ -15,10 +15,11 @@ class CreatePromotionsTable extends Migration
     {
         Schema::create('promotions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('promotion_title');
-            $table->string('left_grad');
-            $table->string('right_grad');
-            $table->longText('link');
+            $table->longText('page_title');
+            $table->longText('page_details');
+            $table->string('photo');
+            $table->string('slug');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

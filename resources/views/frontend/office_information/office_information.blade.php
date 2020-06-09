@@ -112,6 +112,45 @@
 #myTable{
   margin-top: 50px;
 }
+
+.btn-arrow-right{
+position: relative;
+padding-left: 18px;
+padding-right: 18px;
+}
+.btn-arrow-right:before,.btn-arrow-right:after{
+content:"";
+position: absolute;
+top: 6px; 
+width: 30px; 
+height: 35px; 
+background: inherit;
+border: inherit; 
+border-left-color: transparent; 
+border-bottom-color: transparent;
+border-radius: 0px 4px 0px 0px;
+-webkit-border-radius: 0px 4px 0px 0px;
+-moz-border-radius: 0px 4px 0px 0px;
+transform: rotate(45deg); 
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+}
+.btn-arrow-right:before{
+left: -18px;
+background-color: white;
+}
+.btn-arrow-right:after{
+right: -15px;
+z-index: 1;
+width: 32px;
+height: 29px;
+top: 7px;
+}
+.nav-pills .nav-item .nav-link{
+background-color:#E1DEE6;
+}
 @endsection
 
 @section('content')
@@ -151,10 +190,12 @@
   </div>
 
 
-  <div class="container mt-2">
+  <div class="container mt-3 mb-3">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-11 ml-md-5">
+          <center>
         <input type="search" id="myInput" class="form-control" name="search" placeholder="Search Here">
+        </center>
       </div>
     </div>
   </div>
@@ -167,17 +208,17 @@
     <div class="col-md-9 offset-md-3">
 
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Divisional</a>
+            <li class="nav-item" style="margin-right: 15px;">
+              <button class="nav-link active btn-arrow-right" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Divisional</button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Service Center</a>
+            <li class="nav-item" style="margin-right: 15px;">
+              <button class="nav-link btn-arrow-right" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Service Center</button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Zonal Office</a>
+            <li class="nav-item" style="margin-right: 15px;">
+              <button class="nav-link btn-arrow-right" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Zonal Office</button>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-branch-tab" data-toggle="pill" href="#pills-branch" role="tab" aria-controls="pills-branch" aria-selected="false">Branch Office</a>
+            <li class="nav-item" style="margin-right: 15px;">
+              <button class="nav-link btn-arrow-right" id="pills-branch-tab" data-toggle="pill" href="#pills-branch" role="tab" aria-controls="pills-branch" aria-selected="false">Branch Office</button>
             </li>
           </ul>
 

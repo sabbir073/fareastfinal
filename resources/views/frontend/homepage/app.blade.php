@@ -984,13 +984,14 @@ a {
 
 
 /* ------------------------------- */
-
+.bg-footer-dark, footer.footer--dark{
+  background: linear-gradient(to right, #4B545D, #3C4349);
+}
 
 .menu {
   /* background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%); */
   border-radius: 0.5rem;
   text-transform: uppercase;
-  box-shadow: inset 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
   width: 100%;
   padding: 10px 0;
 }
@@ -1736,31 +1737,31 @@ a {
     font-size: 11px;
     position: relative;
     width: 100%;
+    color: white;
+    font-weight: 300;
     text-align: center;
     z-index: 1;
-    opacity: 0.7;
     transition: 250ms ease all;
   }
   .menu > ol > li > ol {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 200px;
     visibility: hidden;
   }
   .menu > ol > li > ol > li {
-    margin-top: 0.5rem;
+    
     transition: 250ms cubic-bezier(0.42, 0.83, 0.49, 1.35) transform;
     transform: scale(0);
   }
   .menu > ol > li > ol > li > a {
     display: block;
     text-align: center;
-    border-radius: 0.2rem;
-    padding: 4px;
-    font-size: 12px;
+    padding: 10px 4px;
+    font-size: 11px;
     background: #28A745;
-    color: rgba(255, 255, 255, 0.6);
+    color: white;
     transition: 250ms ease all;
   }
   .menu > ol > li > ol > li > a:hover, .menu > ol > li > ol > li > a:focus, .menu > ol > li > ol > li > a:focus-within {
@@ -2144,7 +2145,7 @@ a {
     </li>
     @endforeach
 
-    <li class="menu-item"><a href="#0">Contact</a></li>
+    <li class="menu-item"><a href="{{ route('contacts') }}">Contact</a></li>
   </ol>
 </nav>
 
@@ -2290,7 +2291,7 @@ a {
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer__bottom-content">
-                            <p>© 2020 Fareast Islami Life Insurance Ltd. All rights reserved.</p>
+                            <p style="font-weight: bold;">© 2020 Fareast Islami Life Insurance Ltd. All rights reserved.</p>
 
 
 

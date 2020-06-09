@@ -13,12 +13,7 @@
 }
 .table-bordered td, .table-bordered th{
   border: 1px solid #fff;
-  font-size: 20px;
-}
-
-.table-bordered td, .table-bordered tr{
-  border: 1px solid #fff;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .card--team4 {
@@ -27,6 +22,10 @@
 
 .card--team4 p {
   color: #000;
+}
+
+.table td, .table th{
+vertical-align:middle !important;
 }
 
 
@@ -86,7 +85,7 @@
                       <tbody>
                         @foreach($corpInfos as $corpInfos)
                         <tr>
-                          <th scope="row">{{ $corpInfos->title }}</th>
+                          <th scope="row" width="30%">{{ $corpInfos->title }}</th>
                           <td>{{ $corpInfos->desc }}</td>
                         </tr>
                         @endforeach

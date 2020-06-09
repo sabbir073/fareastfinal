@@ -60,6 +60,9 @@
 
 
   <div class="info">
+      
+    <img src="{{ asset('uploads/pages') }}/{{ $page->photo }}" alt="" class="img-fluid" width="200px">
+      
     {!! html_entity_decode($page->page_details) !!}
   </div>
 

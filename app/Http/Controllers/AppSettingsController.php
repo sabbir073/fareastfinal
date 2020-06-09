@@ -180,6 +180,48 @@ function sub_menu_create(Request $request)
   return back();
 }
 
+
+
+// main_menu_trash
+function main_menu_edit($menu_id)
+{
+  $menu = MainMenu::findOrFail($menu_id);
+  return view('dashboard.app_settings.menu.update',compact('menu'));
+}
+// main_menu_trash
+function submenu_edit($menu_id)
+{
+  $sub_menu = SubMenu::findOrFail($menu_id);
+  $parent_menus = MainMenu::all();
+  return view('dashboard.app_settings.menu.submenu_update',compact('sub_menu','parent_menus'));
+}
+
+// main_menu_trash
+function main_menu_update(Request $request, $menu_id)
+{
+  MainMenu::findOrFail($menu_id)->update([
+    'perent_menu_name'=>$request->perent_menu_name,
+    'link'=>$request->link,
+    'updated_at'      =>Carbon::now(),
+  ]);
+  Alert::toast('UPDATED','success');
+  return back();
+}
+
+// main_menu_trash
+function submenu_update(Request $request, $menu_id)
+{
+
+  SubMenu::findOrFail($menu_id)->update([
+    'sub_menu_name'     =>$request->sub_menu_name,
+    'parent_menu_id'    =>$request->parent_menu_id,
+    'sub_menu_link'    =>$request->sub_menu_link,
+    'updated_at'      =>Carbon::now(),
+  ]);
+  Alert::toast('UPDATED','success');
+  return back();
+}
+
 // main_menu_trash
 function sub_menu_trash($submenu_id)
 {

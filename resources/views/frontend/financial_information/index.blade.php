@@ -54,34 +54,16 @@
             </thead><!-- ends: thead -->
             <tbody>
 
-
-                <tr>
-                    <th scope="row">Sponsors & Directors</th>
-                    <td>28</td>
-                    <td>33.21%</td>
-                </tr>
+              @foreach ($shares as $share)
 
 
                 <tr>
-                    <th scope="row">Sponsors & Directors</th>
-                    <td>28</td>
-                    <td>33.21%</td>
+                    <th scope="row">{{ $share->cat_shareholders }}</th>
+                    <td>{{ $share->number_shareholders }}</td>
+                    <td>{{ $share->percentage }}%</td>
                 </tr>
 
-
-                <tr>
-                    <th scope="row">Sponsors & Directors</th>
-                    <td>28</td>
-                    <td>33.21%</td>
-                </tr>
-
-
-                <tr>
-                    <th scope="row">Sponsors & Directors</th>
-                    <td>28</td>
-                    <td>33.21%</td>
-                </tr>
-
+              @endforeach
 
             </tbody><!-- ends: tbody -->
         </table>
@@ -117,11 +99,11 @@ google.charts.setOnLoadCallback(drawChart);
 // Draw the chart and set the chart values
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['Sponsors & Directors', 33],
-  ['Institute', 2],
-  ['General Public', 4],
-  ['Foreign', 2],
+  ['Shareholding', 'Percentage'],
+  @foreach ($shares as $share)
+  ['{{ $share->cat_shareholders }}', {{ $share->percentage }}],
+  @endforeach
+
 ]);
 
   // Optional; add a title and set the width and height of the chart

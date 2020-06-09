@@ -12,7 +12,6 @@ MENU
 
 @section('content')
 
-{{ error_reporting(0) }}
 
 
       <div class="br-mainpanel">
@@ -202,7 +201,7 @@ MENU
                                 <tr>
                                   <th class="wd-15p">ID</th>
                                   <th class="wd-15p">PARENT MENU</th>
-                                  {{-- <th class="wd-10p">CREATED</th> --}}
+                                  <th class="wd-15p">Link</th>
                                   <th class="wd-20p">ACTION</th>
                                 </tr>
                               </thead>
@@ -213,11 +212,9 @@ MENU
                                   <tr>
                                     <td>{{ $parent_menu->id }}</td>
                                     <td>{{ $parent_menu->perent_menu_name }}</td>
-                                    {{-- <td>{{ $parent_menu->created_at->diffForHumans() }}</td> --}}
-                                    {{-- <td>{{ $top_header->created_at->diffForHumans() }}</td> --}}
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                          <!-- <a type="button" href="#" class="btn-sm btn-teal pd-x-25"><i class="icon ion-arrow-expand"></i></a> -->
+                                          <a type="button" href="{{ route('main_menu_edit',$parent_menu->id) }}" class="btn btn-primary pd-x-25"><i class="icon ion-eye"></i></a>
                                           <a type="button" href="{{ url('/appsettings/main/menu/trash') }}/{{ $parent_menu->id }}" class="btn btn-danger pd-x-25"><i class="icon ion-trash-a"></i></a>
                                         </div>
                                     </td>
@@ -261,7 +258,7 @@ MENU
                                     {{-- <td>{{ $top_header->created_at->diffForHumans() }}</td> --}}
                                     <td>
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                          <!-- <a type="button" href="#" class="btn-sm btn-teal pd-x-25"><i class="icon ion-arrow-expand"></i></a> -->
+                                          <a type="button" href="{{ route('submenu_edit',$sub_menu->id) }}" class="btn btn-primary pd-x-25"><i class="icon ion-eye"></i></a>
                                           <a type="button" href="{{ url('/appsettings/sub/menu/trash') }}/{{ $sub_menu->id }}" class="btn btn-danger pd-x-25"><i class="icon ion-trash-a"></i></a>
                                         </div>
                                     </td>
@@ -293,7 +290,6 @@ MENU
 @endsection
 
 @section('js_cdn')
-
 
 
 @endsection

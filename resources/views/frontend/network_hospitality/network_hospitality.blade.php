@@ -10,6 +10,24 @@
     z-index: 1;
     padding: 1px 0;
   }
+  
+  .accordion_one .accordion-single h6 a[aria-expanded=false]:before, .accordion_two .accordion-single h6 a[aria-expanded=false]:before{
+  
+  font-family:fontawesome !important;
+  content:'\f063'!important;
+  
+  }
+  
+  .accordion_one .accordion-single h6 a[aria-expanded=true]:before, .accordion_two .accordion-single h6 a[aria-expanded=true]:before{
+  font-family:fontawesome !important;
+  content:'\f062'!important;
+  }
+  
+  .accordion-contents{
+    padding:5px 20px!important;
+  }
+  
+  
 
   header h2 {
             color: #ff9933;
@@ -185,7 +203,7 @@
             </div>
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_one">
-                <div class="accordion-contents" style="background: #F4FEE4">
+                <div class="accordion-contents">
                     <p>Investiga tiones demonstr averun lectores legere melius quod kequa legunt saepius. Claritas est
                         etiam pro cessus dynamicus qui sequitur mutatin onem consuetudium. Investiga tiones demonstr
                         averunt lectores legere me liusked quod kequa legunt saepius. Claritas est etiam pro cessus.

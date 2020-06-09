@@ -176,15 +176,15 @@
                 <a href="#" class="br-menu-link">
                    <div class="br-menu-item ">
                       <i class="menu-item-icon icon ion-ios-albums tx-24"></i>
-                      <span class="menu-item-label">Pages</span>
+<span class="menu-item-label">BIMA MELA</span>
                       <i class="menu-item-arrow fa fa-angle-down"></i>
                    </div>
                    <!-- menu-item -->
                 </a>
 
                 <ul class="br-menu-sub nav flex-column">
-                 <li class="nav-item hvr-forward"><a href="{{ route('page_index') }}" class="nav-link">Add Page</a></li>
-                 <li class="nav-item hvr-forward"><a href="{{ route('all_pages') }}" class="nav-link">All Pages</a></li>
+                 <li class="nav-item hvr-forward"><a href="{{ route('page_index') }}" class="nav-link">Add BIMA MELA</a></li>
+                 <li class="nav-item hvr-forward"><a href="{{ route('all_pages') }}" class="nav-link">All BIMA MELA</a></li>
               </ul>
 
 
@@ -405,23 +405,29 @@
 
 
 
-  <!-- Statement & Info -->
+  <!-- Financial Statement -->
   <a href="#" class="br-menu-link">
      <div class="br-menu-item ">
         <i class="menu-item-icon icon ion-edit tx-24"></i>
-        <span class="menu-item-label">Statement & Info</span>
+        <span class="menu-item-label">Financial Information</span>
         <i class="menu-item-arrow fa fa-angle-down"></i>
      </div>
      <!-- menu-item -->
   </a>
   <!-- br-menu-link -->
   <ul class="br-menu-sub nav flex-column">
-     <li class="nav-item hvr-forward"><a href="#" class="nav-link">Add Statement & Info</a></li>
-     <li class="nav-item hvr-forward"><a href="#" class="nav-link">All Statement & Info</a></li>
-     <li class="nav-item hvr-forward"><a href="#" class="nav-link">Trashed Statement & Info</a></li>
+     <li class="nav-item hvr-forward"><a href="{{ route('shareholding.index') }}" class="nav-link">Shareholding Structure</a></li>
+     <li class="nav-item hvr-forward"><a href="#" class="nav-link">Value Statement</a></li>
+     <li class="nav-item hvr-forward"><a href="{{ route('financial.index') }}" class="nav-link">Financial Statement</a></li>
+     <li class="nav-item hvr-forward"><a href="{{ route('annual_report') }}" class="nav-link">Annual Reports</a></li>
+     <li class="nav-item hvr-forward"><a href="{{ route('dash_complaince_certificate') }}" class="nav-link">Complaince Certificate</a></li>
+     <li class="nav-item hvr-forward"><a href="{{ route('dash_complaince_report') }}" class="nav-link">Complaince Report</a></li>
+     <li class="nav-item hvr-forward"><a href="#" class="nav-link">Director Report</a></li>
   </ul>
 
-  <!-- Statement End-->
+  <!-- Financial Statement End-->
+
+
 
 
 
@@ -488,17 +494,21 @@
 
 
      <!-- Gallery -->
-      <a href="{{ route('promotion_index') }}" class="br-menu-link {{ Route::currentRouteNamed('promotion_index') ? 'active' : '' }}">
+      <a href="{{ route('create_page_index') }}" class="br-menu-link {{ Route::currentRouteNamed('promotion_index') ? 'active' : '' }}">
          <div class="br-menu-item ">
             <i class="menu-item-icon icon ion-person tx-24"></i>
-            <span class="menu-item-label">Promotion</span>
+            <span class="menu-item-label">Pages</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
          </div>
          <!-- menu-item -->
       </a>
       <!-- br-menu-link -->
       <ul class="br-menu-sub nav flex-column">
-         <li class="nav-item hvr-forward"><a href="{{ route('promotion_index') }}" class="nav-link {{ Route::currentRouteNamed('promotion_index') ? 'active' : '' }}">Add Gallery</a></li>
+          
+         <li class="nav-item hvr-forward"><a href="{{ route('create_page_index') }}" class="nav-link">Create Page</a></li>
+         
+        <li class="nav-item hvr-forward"><a href="{{ route('create_all_pages') }}" class="nav-link">All Page</a></li>
+        
       </ul>
 
       <!-- Gallery End-->

@@ -238,7 +238,7 @@ a,p{
         <div class="row">
 
           @foreach ($galleries as $gallery)
-            <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="col-lg-3 col-md-4 col-xs-6" style="margin-bottom:30px;">
               {{-- <a href="{{ asset('uploads/gallery') }}/{{ $gallery->gallery }}" class="fancybox" rel="ligthbox">
                   <img  src="{{ asset('uploads/gallery') }}/{{ $gallery->gallery }}" class="zoom img-fluid"  alt="">
                   open image

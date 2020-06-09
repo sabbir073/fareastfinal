@@ -27,14 +27,14 @@ ADD PAGE
                 <nav class="breadcrumb pd-0 mg-0 tx-13">
                    <a class="breadcrumb-item" href="index.html"><i class="icon ion-ios-home-outline"></i> Home</a>
         <!--               <a class="breadcrumb-item" href="#">Dashboard</a>-->
-                   <span class="breadcrumb-item active">ADD PAGE</span>
+                   <span class="breadcrumb-item active">ADD BIMA</span>
                 </nav>
              </div>
 
 
 
         <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
-          <h4 class="tx-gray-800 mg-b-5">ADD PAGE</h4>
+          <h4 class="tx-gray-800 mg-b-5">ADD BIMA</h4>
         </div>
 
 
@@ -67,6 +67,7 @@ ADD PAGE
                             <label for="page_title">Page Title</label>
                             <!-- <textarea name="page_title" id="page_title" class="editable tx-16 bd pd-30 tx-inverse" cols="30" rows="10"></textarea> -->
                             <input type="text" class="form-control" id="page_title" name="page_title" placeholder="Page Title">
+                            <input type="file" class="form-control" name="photo">
 
                             <!-- page_details    -->
 

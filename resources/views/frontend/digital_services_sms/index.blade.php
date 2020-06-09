@@ -37,10 +37,10 @@
 
 
 
-<div class="container">
+<div class="container" style="background: url(https://res.cloudinary.com/onexa/image/upload/v1581408048/shape1_rwwqcx.png) no-repeat; background-size: cover;">
   <div class="row">
     <div class="col-md-12" style="text-align: center;">
-      <img src="https://www.fareastislamilife.com/images/common/mobile_sms.png" style="width:75%;margin: 0 auto;" class="img-fluid" alt="">
+      <img src="https://www.fareastislamilife.com/images/common/mobile_sms.png" style="width:75%;margin: 30px auto 0;" class="img-fluid" alt="">
     </div>
   </div>
 </div>

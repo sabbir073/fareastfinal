@@ -80,6 +80,9 @@
         main{
           margin-top:85px;
         }
+        .modal-content{
+            border: 2px solid #1A8023 !important;
+        }
 
 @endsection
 
@@ -173,7 +176,7 @@
                         <a class="" href="#" data-toggle="modal" data-target=".bd-example-modal-xl">
                           <img src="{{ asset('/uploads/management') }}/{{ $board_of_directors->photo }}" class="img-fluid imgaunfrom" style="width: 100%" alt="">
                         </a>
-                          <h6>{!! html_entity_decode($board_of_directors->name) !!}</h6>
+                          <h6 class="font-weight-bold"><?=str_replace('<p>', ' ', html_entity_decode($board_of_directors->name))?></h6>
                           <div style="display: none;">{!! html_entity_decode($board_of_directors->speaks) !!}</div>
                           {{-- <p class="text-dark">{!! html_entity_decode(Str::limit($board_of_directors->speaks,10)) !!}</p> --}}
                       </div>
@@ -189,6 +192,9 @@
                   <div class="modal-dialog modal-xl">
                     <div class="modal-content" style="border: 5px solid #000;">
                       <div class="container">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true" style="margin-right: 15px; margin-top: 25px; color: red;">&times;</span>
+                        </button>
                         <div class="row">
                           <div class="col-md-10 offset-md-1">
                             <div class="far_modal p-5">
@@ -196,7 +202,7 @@
                                 <img id="aunModalToImg" src="" class="img-fluid" alt="" style="border-radius: 50%;">
                               </div>
                               <div id="aunModalTo" class="far_para pt-2">
-                                <h2 id="aunModalToh" class="text-right text-dark"></h2>
+                                <h4 id="aunModalToh" class="text-right text-dark font-weight-bold"></h4>
                                 <p id="aunModalTod" class="text-justify text-dark"></p>
                               </div>
                             </div>

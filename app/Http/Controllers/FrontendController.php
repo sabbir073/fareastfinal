@@ -51,6 +51,12 @@ use App\CorpInfo;
 use Alert;
 use Carbon\Carbon;
 use Image;
+use App\AnnualReports;
+use App\Shareholding;
+use App\FinancialStatement;
+use App\Year;
+use App\CompalianceCertificate;
+use App\CompalianceReport;
 
 class FrontendController extends Controller
 {
@@ -71,7 +77,7 @@ class FrontendController extends Controller
 
       $top_header           = Topheader::latest()->paginate(1);
       $products             = Product::all();
-      // $products          = ManagementBoard::all();
+      $bimas                = page::all();
       $fareast_stars        = FareastStar::all();
       $faqs                 = Faq::all();
       $events               = Event::all();
@@ -89,7 +95,7 @@ class FrontendController extends Controller
       // $toDate = Carbon::createFromFormat('Y-m-d', $popups->toDate)->format('M d, Y');
       // echo Carbon::createFromFormat('m', $popups[0]->toDate)->format('M');;
       // echo $popups;
-      return view('frontend.homepage.index',compact('top_header','popups','galleries','promotions','claims','products','fareast_stars','faqs','events','notices','newses','awards','corporates','sliders','maps','quick_services'));
+      return view('frontend.homepage.index',compact('top_header','popups','galleries','promotions','claims','products','fareast_stars','faqs','events','notices','newses','awards','corporates','sliders','maps','quick_services','bimas'));
     }
 
     // messages
@@ -105,9 +111,16 @@ class FrontendController extends Controller
 
 
     // page
-    function page($page_id)
+    function bima($page_id)
     {
       $page = page::findOrFail($page_id);
+      return view('frontend.bimas.page',compact('page'));
+    }
+
+    // page
+    function page($page_id)
+    {
+      $page = Promotion::findOrFail($page_id);
       return view('frontend.pages.page',compact('page'));
     }
 
@@ -135,14 +148,14 @@ class FrontendController extends Controller
     // single_committee
     function chairman_message()
     {
-      $single_message = Chairman::latest()->paginate(1);
+      $single_message = Chairman::all();
       // $single_message = Message::all();
       return view('frontend.messages.index',compact('single_message'));
     }
     // ceo_message
     function ceo_message()
     {
-      $single_message = Ceo::latest()->paginate(1);
+      $single_message = Ceo::all();
       // $single_message = Message::all();
       return view('frontend.messages.ceo',compact('single_message'));
     }
@@ -281,7 +294,8 @@ class FrontendController extends Controller
     // financial_information
     function financial_information()
     {
-      return view('frontend.financial_information.index');
+      $shares = Shareholding::latest()->get();
+      return view('frontend.financial_information.index',compact('shares'));
     }
 
     // value_add_statement
@@ -302,35 +316,35 @@ class FrontendController extends Controller
       return view('frontend.digital_activities.index');
     }
 
-    // annual_reports
-    function annual_reports()
-    {
-      return view('frontend.annual_reports.index');
-    }
+    // // annual_reports
+    // function annual_reports()
+    // {
+    //   return view('frontend.annual_reports.index');
+    // }
 
-    // complaince_certificate
-    function complaince_certificate()
-    {
-      return view('frontend.complaince_certificate.index');
-    }
+    // // complaince_certificate
+    // function complaince_certificate()
+    // {
+    //   return view('frontend.complaince_certificate.index');
+    // }
+    
+    // // complaince_report
+    // function complaince_report()
+    // {
+    //   return view('frontend.complaince_report.index');
+    // }
 
-    // complaince_report
-    function complaince_report()
-    {
-      return view('frontend.complaince_report.index');
-    }
+    // // director_report
+    // function director_report()
+    // {
+    //   return view('frontend.director_report.index');
+    // }
 
-    // director_report
-    function director_report()
-    {
-      return view('frontend.director_report.index');
-    }
-
-    // financial_statement
-    function financial_statement()
-    {
-      return view('frontend.financial_statement.index');
-    }
+    // // financial_statement
+    // function financial_statement()
+    // {
+    //   return view('frontend.financial_statement.index');
+    // }
 
     // gallery
     function gallery()
@@ -625,6 +639,41 @@ class FrontendController extends Controller
       return view('dashboard.CareerApplication.index',compact('CareerApplication'));
     }
 
+
+  // annual_reports
+    function annual_reports()
+    {
+      $reports = AnnualReports::latest()->get();
+      return view('frontend.annual_reports.index',compact('reports'));
+    }
+
+    // complaince_certificate
+    function complaince_certificate()
+    {
+      $reports = CompalianceCertificate::latest()->get();
+      return view('frontend.complaince_certificate.index',compact('reports'));
+    }
+
+    // complaince_report
+    function complaince_report()
+    {
+      $reports = CompalianceReport::latest()->get();
+      return view('frontend.complaince_report.index',compact('reports'));
+    }
+
+    // director_report
+    function director_report()
+    {
+      return view('frontend.director_report.index');
+    }
+
+    // financial_statement
+    function financial_statement()
+    {
+      $statements = Year::with('years')->get();
+      return view('frontend.financial_statement.index',compact('statements'));
+      // return $statements;
+    }
 
     // END
 

@@ -61,10 +61,14 @@ EDIT PAGE
 @csrf
 
 <input type="hidden" name="page_id" value="{{ $single_page->id }}">
+
                             <!--add Page Title-->
 
                             <label for="page_title">Page Title</label>
                             <textarea name="page_title" id="page_title" class="editable tx-16 bd pd-30 tx-inverse" cols="30" rows="10">{{ $single_page->page_title }}</textarea>
+                            <input type="hidden" class="form-control" name="old_photo" value="{{ $single_page->photo }}">
+                            <img src="{{ asset('uploads/pages') }}/{{ $single_page->photo }}" alt="">
+                            <input type="file" class="form-control" name="photo">
 
                             <!-- page_details    -->
 

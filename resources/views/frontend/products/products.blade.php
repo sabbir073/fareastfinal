@@ -54,7 +54,7 @@ font-size: 20px;
       <div class="container mt-2">
         <div class="row">
           <div class="col-md-12">
-            <input type="search" id="myInput" class="form-control" name="search" placeholder="Search Here">
+            <input type="search" id="myInput" class="form-control" name="search" placeholder="Search Here" style="margin-top: 25px; width: 1035px; margin-left: 5px;">
           </div>
         </div>
       </div>

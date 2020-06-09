@@ -30,7 +30,7 @@
               <div class="row">
                   <div class="col-md-12">
                       <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
-                          <h4 class="page_title text-uppercase">director report</h4>
+                          <h4 class="page_title text-uppercase" style="margin-top: 35px;">director report</h4>
                       </div>
                   </div>
               </div><!-- ends: .row -->
@@ -51,11 +51,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <p class="text-center text-dark">
-        <a href="https://www.fareastislamilife.com/files/common/Directors_Report_2018.pdf" target="_blank">
-          <i class="fas fa-file-pdf" style="color:#F9240F;"></i> Director's Report download
-        </a>
-      </p>
+      @foreach ($directors as $director)
+        <p class="text-center text-dark">
+          <a href="{{ route('director_download',$director->id) }}" target="_blank">
+            <i class="fas fa-file-pdf" style="color:#F9240F;"></i> Director's Report download
+          </a>
+        </p>
+      @endforeach
     </div>
   </div>
 </div>

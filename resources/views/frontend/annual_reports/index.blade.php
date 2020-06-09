@@ -30,7 +30,7 @@
               <div class="row">
                   <div class="col-md-12">
                       <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
-                          <h4 class="page_title">ANNUAL REPORTS</h4>
+                          <h4 class="page_title" style="margin-top: 35px;">ANNUAL REPORTS</h4>
                       </div>
                   </div>
               </div><!-- ends: .row -->
@@ -40,22 +40,41 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col-md-7 offset-md-2">
-      <img src="https://cdn.dribbble.com/users/948499/screenshots/5407585/comp_1_3.gif" style="width:100%;margin: 0 auto;" class="img-fluid" alt="">
+    <div class="col-md-10 offset-md-1">
+      <div class="table-responsive">
+        <table class="table table-one">
+            <thead class="table-success">
+                <tr>
+                    <th scope="col">Description</th>
+                    <th scope="col">Download</th>
+                </tr>
+            </thead><!-- ends: thead -->
+            <tbody>
+
+              @foreach ($reports as $report)
+                <tr>
+                    <th scope="row">{{ $report->desc }}</th>
+                    <td>
+                      <i class="fa fa-download" style="color: #B22A08; margin-right:5px;"></i>
+                      <a href="{{ route('annual_report_download',$report->id) }}" download>Download</a></td>
+
+                </tr>
+              @endforeach
+
+
+
+
+
+
+
+            </tbody><!-- ends: tbody -->
+        </table>
+    </div>
     </div>
   </div>
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h3 class="text-uppercase text-center">maintenance mode</h3>
-    </div>
-  </div>
-</div>
-
 
 
 

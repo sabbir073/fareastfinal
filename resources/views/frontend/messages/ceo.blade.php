@@ -112,13 +112,23 @@
 /* Top left text */
 .top-left {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  text-align: justify;
   font-size: 50px;
   color: #66E12C;
   font-weight: 700;
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.containerceo {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
 
 
@@ -135,20 +145,38 @@
 
 
   @forelse ($single_message as $message)
+  
+  @if($loop->last)
 
 <section class="ceo_div">
 
 
   <section class="ceo_header" style="margin-top: 84px;">
-      <img src="https://res.cloudinary.com/onexa/image/upload/v1580621324/images/s3_cgxujv.jpg" alt="Snow" class="img-fluid" style="float: right; width: 50%;">
-      <div class="top-left text-uppercase">Message From The <br> Chief Executive Office</div>
+      <div class="containerceo">
+      <img src="{{URL::to('uploads/ceo')}}/{{ $message->long_photo }}" alt="Snow" class="img-fluid" style="height: 500px; width: 1300px;">
+      <div class="centered top-left" >Message From The <br> Chief Executive Office</div>
+      </div>
   </section>
 
 
-  <section class="ceo_message" style="margin-top: 50%;">
+  <section class="ceo_message" style="margin-top: 5%;">
     <div class="container">
 
     {!! html_entity_decode($message->chairman_message) !!}
+    
+    <br>
+    <div class="signature">
+          <img src="{{ asset('uploads/signature') }}/{{ $message->signature }}" class="img-fluid" alt="">
+        </div>
+        <div class="ceo_name">
+          {!! html_entity_decode($message->name) !!}
+        </div>
+        <div class="ceo_position">
+          {!! html_entity_decode($message->position) !!}
+        </div>
+        <div class="qr_code">
+        <img src="{{ asset('uploads/qr_code') }}/{{ $message->qr_code }}" style="width:200px; float: left;" class="img-fluid" alt="">
+      </div>
 
     </div>
   </section>
@@ -159,7 +187,7 @@
 
 
 
-      <div class="ceo_left" style="padding: 40px; width: 35%; margin-left: 5%;">
+      <!--<div class="ceo_left" style="padding: 40px; width: 35%; margin-left: 5%;">
         <div class="signature">
           <img src="{{ asset('uploads/signature') }}/{{ $message->signature }}" class="img-fluid" alt="">
         </div>
@@ -175,22 +203,19 @@
         <div class="area">
           <p>Dhaka</p>
         </div>
-      </div>
+      </div>-->
 
 
 
     </div>
 
-    <div clah6ss="col-md-4 offset-md-2">
-      <div class="qr_code">
-        <img src="{{ asset('uploads/qr_code') }}/{{ $message->qr_code }}" style="width:75%; float: right;" class="img-fluid" alt="">
-      </div>
-    </div>
+   
 
     </div>
   </section>
 
 </section>
+@endif
 
 @empty
 

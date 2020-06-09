@@ -16,7 +16,6 @@
     background: #FBFBFB;
   }
 
-
 @endsection
 
 @section('content')
@@ -30,7 +29,7 @@
               <div class="row">
                   <div class="col-md-12">
                       <div class="breadcrumb_wrapper d-flex flex-column align-items-center">
-                          <h4 class="page_title text-uppercase">financial statement</h4>
+                          <h4 class="page_title text-uppercase" style="margin-top: 35px;">financial statement</h4>
                       </div>
                   </div>
               </div><!-- ends: .row -->
@@ -40,22 +39,41 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col-md-7 offset-md-2">
-      <img src="https://cdn.dribbble.com/users/948499/screenshots/5407585/comp_1_3.gif" style="width:100%;margin: 0 auto;" class="img-fluid" alt="">
+    <div class="col-md-10 offset-md-1">
+      <div class="table-responsive">
+
+@foreach ($statements as $statement)
+
+        <table class="table table-one">
+            <thead class="table-success">
+                <tr>
+                    <th scope="col">Year {{ $statement->year }}</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead><!-- ends: thead -->
+            <tbody>
+
+        @foreach ($statement->years as $value)
+          <tr>
+              <th scope="row">{{$value->title}}</th>
+              <td><i class="fa fa-download" style="color: #B22A08; margin-right:5px;"></i><a href="#" download>Download</a></td>
+          </tr>
+        @endforeach
+
+            </tbody><!-- ends: tbody -->
+          </table>
+
+@endforeach
+
+
+
+
+    </div>
     </div>
   </div>
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h3 class="text-uppercase text-center">maintenance mode</h3>
-    </div>
-  </div>
-</div>
-
 
 
 
