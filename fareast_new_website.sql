@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2020 at 11:58 PM
+-- Generation Time: Jun 10, 2020 at 12:07 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -1721,8 +1721,8 @@ INSERT INTO `sub_menus` (`id`, `sub_menu_name`, `parent_menu_id`, `sub_menu_link
 (25, 'annual reports', '3', 'http://fareastislamilife.org/annual/reports', NULL, '2020-02-22 04:23:35', NULL),
 (26, 'complaince certificate', '3', 'http://fareastislamilife.org/complaince/certificate', NULL, '2020-02-22 04:24:37', NULL),
 (27, 'complaince report', '3', 'http://fareastislamilife.org/complaince/report', NULL, '2020-02-22 04:25:08', NULL),
-(28, 'director report', '1', 'https://newfareast.xubisoft.com/director/report', '2020-02-22 04:27:19', '2020-02-22 04:25:30', '2020-02-22 04:27:19'),
-(29, 'director report', '3', 'https://newfareast.xubisoft.com/director/report', NULL, '2020-02-22 04:27:01', NULL),
+(28, 'director report', '1', 'http://fareastislamilife.org/director/report', '2020-02-22 04:27:19', '2020-02-22 04:25:30', '2020-02-22 04:27:19'),
+(29, 'director report', '3', 'http://fareastislamilife.org/director/report', NULL, '2020-02-22 04:27:01', NULL),
 (30, 'Message From Chairman', '1', '/chairman/message', NULL, '2020-03-20 19:25:51', NULL),
 (31, 'Message From CEO', '1', '/ceo/message', NULL, '2020-03-24 17:07:42', NULL);
 
@@ -6120,7 +6120,9 @@ INSERT INTO `visitors_counts` (`id`, `visitor`, `created_at`, `updated_at`) VALU
 (4253, '13.76.191.237', '2020-06-10 09:41:52', NULL),
 (4254, '13.76.191.237', '2020-06-10 10:44:58', NULL),
 (4255, '13.76.191.237', '2020-06-10 10:44:58', NULL),
-(4256, '13.76.191.237', '2020-06-10 10:45:00', NULL);
+(4256, '13.76.191.237', '2020-06-10 10:45:00', NULL),
+(4257, '103.204.83.98', '2020-06-10 11:01:11', NULL),
+(4258, '202.164.213.66', '2020-06-10 11:01:54', NULL);
 
 -- --------------------------------------------------------
 
@@ -6824,7 +6826,7 @@ ALTER TABLE `visions`
 -- AUTO_INCREMENT for table `visitors_counts`
 --
 ALTER TABLE `visitors_counts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4257;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4259;
 
 --
 -- AUTO_INCREMENT for table `years`
